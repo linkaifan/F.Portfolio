@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<title>登录</title>
+<script src=".././F.js/flexible.debug.js"></script>
+</head>
+<body>
+	<form method="POST" name="login" class="login" >
+		<input type="text" name="id" class="id">
+		<input type="password" name="password" class="password">
+		<img src=".././F.img/editUpload.png" alt="" id="LoginBtn">
+	</form>
+	
+	<script type="text/javascript" src='.././F.js/JQ/JQ1.9.1.js'></script>
+
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#LoginBtn').click(function(){
+				var Id = $('.id').val(),
+					Password = $('.password').val();
+				$.ajax({
+				  url: 'http://139.199.18.137:7777/api/login?email='+Id+'&password='+Password,
+				  type: 'POST',
+				  success: function (data, status) {
+				    console.log(data);
+				    window.open('administrate.html?'+data.data,'_self');
+					return false;
+				  },
+				  fail: function (err, status) {
+				    console.log(err);
+				    return false;
+				  }
+				})
+			})
+		})
+	</script>
+</body>

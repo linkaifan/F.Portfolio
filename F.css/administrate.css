@@ -1,0 +1,183 @@
+/*去除Loading*/
+.ui-loader{
+  display: none;
+}
+/*字体图标开始*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-remove:before {
+  content: "\e014";
+}
+.glyphicon-remove-circle:before {
+  content: "\e088";
+}
+.glyphicon-floppy-remove:before {
+  content: "\e174";
+}
+/*字体图标结束*/
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: url("") no-repeat;
+  background-size: 100% 100%;
+  font-family: "Microsoft YaHei";
+  overflow: hidden;
+}
+/*header开始*/
+header,nav{
+  display: -webkit-flex;
+  justify-content: space-between;
+
+}
+.LOGO {
+  margin-left: 0.5867rem;
+  margin-top: 0.4667rem;
+  width: 2.48rem;
+  height: 0.6rem;
+}
+.BTN-HOME {
+  width: 0.55rem;
+  height: 0.55rem;
+  background-position: center;
+  display: inline-block;
+  margin-right:  0.466667rem;
+  margin-top: 0.4667rem;
+}
+.BTN-HOME img {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+/*header结束*/
+/*nav开始*/
+.upLoad, .upLoad img{
+  width: 2.88rem;
+  height: 0.613333rem;
+}
+.upLoad{
+  margin-right: 1.093333rem;
+  margin-top: 1.56rem;
+}
+.upLoad+p{
+  font-size: 17px;
+  color: rgb(153, 153, 153);
+  order: -1;
+  margin-left: 1.213333rem;
+  margin-top: 1.56rem;
+  line-height: 0.613333rem;
+}
+/*nav结束*/
+/*main开始*/
+main{
+  margin-left: 1.213333rem;
+  margin-top: 0.973333rem;
+  height:11.466667rem;
+  overflow: auto;
+
+}
+::-webkit-scrollbar {      /*隐藏滚轮*/
+  display: none;
+}
+.Show{
+  display: -webkit-flex;
+  margin-bottom: 0.506667rem;
+}
+.Show > img{
+   width: 2.4rem;
+   height: 1.8rem;
+}
+.ShowText{
+  flex: 1; 
+  padding-left: 0.466667rem;
+  position: relative;
+}
+.ShowText>span{
+  color: rgb(153, 153, 153);
+  font-size: 14px;
+}
+.ShowText img,.ShowText a{
+  display: inline-block;
+  width:1.666667rem;
+  height: 0.493333rem;
+}
+.ShowText a{
+  position: absolute;
+  bottom: 0;
+  left: 0.773333rem;
+}
+.ShowText a:nth-child(4){
+  left: 3.224333rem;
+}
+/*main结束*/
+/*遮罩层开始*/
+.Mask{
+  display: none;
+  position: absolute;
+  width: 100%;height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;left: 0;
+}
+.popUp{
+  position: absolute;
+  border-radius: 24px;
+  background-color: rgb(255, 255, 255);
+  width: 8.066667rem;
+  height: 6.56rem;
+  top: 3.6rem;
+  left: 1.013333rem;
+}
+.popUp>span{           /* remove按钮*/
+  position: absolute;
+  right: 0.373333rem;
+  top: 0.373333rem;
+  font-size: 0.533333rem;
+  color: rgb(205, 205, 205);
+
+}
+.popUpBtn{        /*二个按钮*/
+  position: absolute;
+  bottom: 1.08rem;
+  padding-left: 1.466667rem;
+}
+.popUpBtn img,.popUpBtn a{          
+  display: inline-block;
+  width:2.146667rem;
+  height: 0.693333rem;
+}
+.popUpBtn .popUpDelete{
+    margin-right: 0.8rem;
+}
+.popUp p{
+  position: absolute;
+  left: 1.013333rem;
+  top: 2.88rem;
+  color: rgb(153, 153, 153);
+  font-size: 15px;
+}
+.popUp p:nth-child(2){
+  top: 1.68rem;
+  color: rgb(243, 106, 106);
+  font-size: 18px;
+}
+
+/*遮罩层结束*/
+
+
+

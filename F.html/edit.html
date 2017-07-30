@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<title>编辑</title>
+<script src=".././F.js/flexible.debug.js"></script>
+<link href=".././F.css/edit.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<img class="LOGO" src=".././F.img/LOGO.png" alt="vtmer">
+    	<a href="#" class="BTN-HOME"><img src=".././F.img/BTN-HOME.png" alt="hmoe"/></a>
+    </header>
+    <main>
+    	<div class="editImg">
+    		<img src=".././F.img/editImg.png" alt="editImg"/>
+            <input type="file" name="pic" id='upImg' form="edit" >
+    		<div class="ImgText">
+    			<p>点击左侧<br/>上传/替换图片</p>
+    			<p>注：图片大小为240*180</p>
+    		</div>
+    	</div>
+    	<div class="editForm">
+    		<form action="" method="" autocomplete="on"  id="edit" name="edit" enctype="multipart/form-data">
+    			<div class="editText">
+    				<input type="text" name="title" placeholder="这是输入完成的标题" />
+    				<p>注：标题为15-35字符为宜</p>
+    			</div>
+    			<div class="editUrl">
+    				<input type="text" name="url" placeholder="在此输入URL" />
+    			</div>
+    			<div class="editSummary">
+    				<textarea cols="" rows="" name="intro" placeholder="请在此输入简介" maxlength="100"></textarea>
+    				<p>注：简介为60-100字符为宜</p>
+    			</div>
+    			<div class="editDifficulty">
+    				<textarea cols="" rows="" name="content" placeholder="请在此输入技术难点" ></textarea>
+    				<p>注：分点表述，没点间空一行</p>
+    			</div>
+    		</form>
+    		<footer class="editBtn">
+    			<a href="#" class="editUpload"><img src=".././F.img/editUpload.png" alt="editUpload" class="editUploadImg"/></a>
+    			<a href="#" class="editCancel"><img src=".././F.img/editCancel.png" alt="editCancel" class="editCancelImg"/></a>
+    		</footer>
+    	</div>
+    </main>
+    <div class="Mask">
+    	<div class="popUp">
+    		<span class="glyphicon glyphicon-remove"></span>
+    		<p>是否放弃<br/>修改/上传内容</p>
+    		<div class="popUpBtn">
+    			<a href="#" class="popUpgiveUp"><img src=".././F.img/popUpgiveUp.png" alt="popUpgiveUp" class="popUpgiveUpImg"  /></a>
+    			<a href="#" class="popUpCancel"><img src=".././F.img/popUpCancel.png" alt="popUpCancel" /></a>
+    		</div>
+    	</div>
+
+    </div>
+    
+
+    <script type="text/javascript" src='.././F.js/JQ/JQ1.9.1.js'></script>
+    <script type="text/javascript" src='.././F.js/JQ/JQM1.4.5.js'></script>
+    <script type="text/javascript" src='.././F.js/edit.js'></script>
+
+</body>

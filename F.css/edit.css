@@ -1,0 +1,220 @@
+/*去除Loading*/
+.ui-loader{
+  display: none;
+}
+/*字体图标开始*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-remove:before {
+  content: "\e014";
+}
+.glyphicon-remove-circle:before {
+  content: "\e088";
+}
+.glyphicon-floppy-remove:before {
+  content: "\e174";
+}
+/*字体图标结束*/
+*{
+  margin: 0;
+  padding: 0;
+}
+input:focus,textarea:focus{
+  outline: none;
+}
+body{
+  background: url("") no-repeat;
+  background-size: 100% 100%;
+  font-family: "Microsoft YaHei";
+}
+/*header开始*/
+header,nav{
+  display: -webkit-flex;
+  justify-content: space-between;
+
+}
+.LOGO {
+  margin-left: 0.5867rem;
+  margin-top: 0.4667rem;
+  width: 2.48rem;
+  height: 0.6rem;
+}
+.BTN-HOME {
+  width: 0.55rem;
+  height: 0.55rem;
+  background-position: center;
+  display: inline-block;
+  margin-right:  0.466667rem;
+  margin-top: 0.4667rem;
+}
+.BTN-HOME img {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+/*header结束*/
+/*mian 上传Img开始*/
+.editImg{                 /*上传封面图表单*/
+  display: -webkit-flex;
+  margin-left: 1.226667rem;
+  margin-top: 0.866667rem;
+  position: relative;
+
+}
+#upImg{               /* 上传图片的input */
+  position: absolute;
+  width:3.2rem;
+  height: 2.4rem;
+  top: 0;
+  left: 0;
+  opacity:0;
+}
+.editImg a, .editImg img{
+  display: inline-block;
+  width:3.2rem;
+  height: 2.4rem;
+}
+.ImgText{         /* 上传封面图右边文字 */
+  flex: 1;
+  position: relative;
+}
+.ImgText p{
+  position: absolute;
+  left: 0.426667rem;
+  color: rgb(153, 153, 153);
+  font-size: 18px;
+}
+.ImgText p:last-child{
+  bottom: 0;
+  font-size: 12px;
+}
+/*mian 上传Img结束*/
+/*mian 表单部分开始*/
+.editForm{              /*总表单布局*/
+  margin-left: 1.226667rem;
+  margin-right: 1.146667rem;
+  margin-top: 0.946667rem;
+}
+.editForm form>div{       /*各个表单统一样式*/
+  margin-bottom: 0.506667rem;
+}
+.editDifficulty{
+  margin-bottom: 0.093333rem !important;
+}
+.editForm input{
+  width: 7.626667rem;
+}
+.editForm textarea{
+  width: 7.493333rem;
+}
+.editText p,
+.editUrl p,
+.editSummary p,
+.editDifficulty p{
+  color: rgb(153, 153, 153);
+} 
+.editText input{
+  font-size: 16px;
+}                  
+.editSummary textarea::-webkit-input-placeholder,
+.editDifficulty textarea::-webkit-input-placeholder{
+  color: rgb(204, 204, 204);
+}
+.editText input::-webkit-input-placeholder{
+  color: rgb(51, 51, 51);
+   font-size: 16px;
+}
+.editText input,.editUrl input{
+  line-height: 0.666667rem;
+  border: none;
+  border-bottom: 0.013333rem solid rgb(153, 153, 153);
+}
+.editUrl input::-webkit-input-placeholder{
+  color: rgb(203, 203, 203);
+}
+.editSummary textarea{
+  height: 1.68rem;
+  padding-top: 0.2rem;
+  padding-left: 0.133333rem;
+  resize : none;
+}
+.editDifficulty textarea{
+  height: 4.0rem !important;
+  padding-top: 0.2rem;
+  padding-left: 0.133333rem;
+  resize : none;
+}
+.editBtn img,.editBtn a{          /*二个按钮*/
+  display: inline-block;
+  width:1.666667rem;
+  height: 0.493333rem;
+}
+.editBtn a{
+  float: right;
+}
+.editUpload{
+  margin-left: 0.2rem;
+}
+/*mian 表单部分开始*/
+/*遮罩层开始*/
+.Mask{
+  display: none;
+  position: absolute;
+  width: 100%;height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;left: 0;
+}
+.popUp{
+  position: absolute;
+  border-radius: 24px;
+  background-color: rgb(255, 255, 255);
+  width: 8.066667rem;
+  height: 6.56rem;
+  top: 3.6rem;
+  left: 1.013333rem;
+}
+.popUp>span{           /* remove按钮*/
+  position: absolute;
+  right: 0.373333rem;
+  top: 0.373333rem;
+  font-size: 0.533333rem;
+  color: rgb(205, 205, 205);
+
+}
+.popUpBtn{        /*二个按钮*/
+  position: absolute;
+  bottom: 1.08rem;
+  padding-left: 1.466667rem;
+}
+.popUpBtn img,.popUpBtn a{          
+  display: inline-block;
+  width:2.146667rem;
+  height: 0.693333rem;
+}
+.popUpBtn .popUpgiveUp{
+    margin-right: 0.8rem;
+}
+
+.popUp p:nth-child(2){
+  position: absolute;
+  left: 1.013333rem;
+  top: 1.68rem;
+  color: rgb(243, 106, 106);
+  font-size: 18px;
+}
+/*遮罩层结束*/ 
